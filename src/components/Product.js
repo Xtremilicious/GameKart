@@ -24,7 +24,9 @@ export default class Product extends Component {
                                 {' '}
                                 in cart
                         </p>) : (
-                                    <i className='fa fa-cart-plus' />)}
+                                    
+                                    <i className='fa fa-cart-plus' />
+                            )}
                         </button>
 
                     </div>
@@ -97,10 +99,8 @@ const ProductWrapper = styled.div`
         color: var(--mainWhite);
         font-size: 1.4rem;
         border-radius: 0.5rem 0rem 0rem 0rem;
-        transform: translate(100%, 100%);
     }
     .img-container:hover .cart-btn{
-        transform: translate(0,0);
         transition:all 1s linear;
     }
     .cart-btn:hover{
