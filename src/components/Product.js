@@ -12,7 +12,7 @@ export default class Product extends Component {
                 <div className="card">
                     <ProductConsumer>
                     {(value)=>(
-                        <div className="img-container p-5" onClick={() => { value.handleDetail(id); }}>
+                        <div className="img-container" onClick={() => { value.handleDetail(id); }}>
                         <Link to='/details'>
                             <img src={img} alt={title} className='card-img-top' />
                         </Link>
@@ -25,7 +25,10 @@ export default class Product extends Component {
                                 in cart
                         </p>) : (
                                     
-                                    <i className='fa fa-cart-plus' />
+                                    <p className='text-capitalize mb-0' disabled>
+                                    {' '}
+                                    Add <i className='fa fa-cart-plus' />
+                            </p>
                             )}
                         </button>
 
@@ -39,11 +42,10 @@ export default class Product extends Component {
                             <p className='align-self-center mb-0'>
                                 {title}
                             </p>
-                            <h5 className="text-blue font-italic mb-0">
-                               <span className="mr-1">
-                               $</span> 
-                               {price}
-                            </h5>
+
+                               <span className="align-self-center">
+                               ${price}</span> 
+
                     </div>
                 </div>
 
@@ -86,25 +88,29 @@ const ProductWrapper = styled.div`
         overflow: hidden;
     }
     .img-container:hover .card-img-top{
-        transform: scale(1.2);
+        transform: scale(1.03);
         transition:all 1s linear;
     }
     .cart-btn {
         position: absolute;
-        bottom: 0;
+        bottom: 0px;
         right: 0;
+
         padding: 0.2rem 0.4rem;
-        background: var(--lightBlue);
+        background: var(--mainRed);
         border: none;
         color: var(--mainWhite);
         font-size: 1.4rem;
         border-radius: 0.5rem 0rem 0rem 0rem;
+        transform: translate(100%, 100%);
     }
     .img-container:hover .cart-btn{
-        transition:all 1s linear;
+        transition:all 0.5s linear;
+        transform: translate(0, 0);
     }
     .cart-btn:hover{
-        color: var(--mainBlue);
+        color: var(--mainWhite);
         cursor: pointer;
+        
     }
 `;

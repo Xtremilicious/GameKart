@@ -12,7 +12,7 @@ import Modal from './components/Modal';
 function App() {
   return (
     <React.Fragment>
-      <Navbar></Navbar>
+      <Navbar />
       <Switch>
       <Route exact path='/' component={ProductList}></Route>
         <Route path='/details' component={Details}></Route>

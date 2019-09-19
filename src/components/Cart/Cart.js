@@ -9,8 +9,8 @@ import CartTotals from './CartTotals';
 export default class Cart extends Component {
     render() {
         return (
-            <section>
-                <ProductConsumer>
+            <ProductConsumer>
+   
                     {value => {
                         const { cart } = value;
                         if (cart.length > 0) {
@@ -31,11 +31,8 @@ export default class Cart extends Component {
                             ); 
                         }
                     }}
-                </ProductConsumer>
 
-
-                
-            </section>
+            </ProductConsumer>
 
         )
     }

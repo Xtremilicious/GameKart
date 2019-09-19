@@ -4,19 +4,18 @@
   --mainWhite: #f3f3f3;
   --mainDark: #232528;
   --mainYellow: #ffa400;
+  --mainRed: #d42f15;
 }
 body{
-  font-family: 'Oswald', 'sans-serif' !important;
+  font-family: 'Lato', 'sans-serif' !important;
   background: var(--mainWhite) !important;
   color: var(--mainDark) !important;
 }
 .text-title{
-  font-family: 'Permanent Marker', cursive;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
+  font-family: 'Lato';
 }
-.text-blue{
-  color: var(--mainBlue);
+.text-red{
+  color: var(--mainRed);
 }
 .text-bright{
   color: var(--lightBlue);

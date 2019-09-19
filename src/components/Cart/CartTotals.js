@@ -18,19 +18,19 @@ export default function CartTotals({value}) {
                             <span>
                                subtotal:  
                             </span>
-                            <strong>$ {cartSubtotal}</strong>
+                            <strong>$ {parseFloat(cartSubtotal.toFixed(2))}</strong>
                         </h5>
                         <h5>
                             <span>
                                Tax:  
                             </span>
-                            <strong>$ {cartTax}</strong>
+                            <strong>$ {parseFloat(cartTax.toFixed(2))}</strong>
                         </h5>
                         <h5>
                             <span>
                                total:  
                             </span>
-                            <strong>$ {cartTotal}</strong>
+                            <strong>$ {parseFloat(cartTotal.toFixed(2))}</strong>
                         </h5>
 
                     </div>
