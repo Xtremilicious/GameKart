@@ -14,7 +14,10 @@ export default class ProductList extends Component {
                         <div className='row'>
                             <ProductConsumer>
                                 {(value)=>{
-                                    return value.products.map(product =>{
+                                    const {search} = value;
+                                    return value.products.filter((product)=>{
+                                        return product.title.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+                                         }).map(product =>{
                                         return <Product key={product.id} product={product} />
                                     })
                                 }}
